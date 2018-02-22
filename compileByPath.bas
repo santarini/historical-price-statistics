@@ -11,6 +11,7 @@ Dim Rng As Range
 Dim RngNoPath As String
 Dim StartTime As Double
 Dim SecondsElapsed As Double
+Dim tickersPerSec As Double
 
 StartTime = Timer
 
@@ -86,6 +87,7 @@ Next FileNumber
                                         
 'tell me how long it took
 SecondsElapsed = Round(Timer - StartTime, 2)
-MsgBox "This code ran successfully in " & SecondsElapsed & " seconds", vbInformation
+tickersPerSec = (Count / SecondsElapsed)
+MsgBox "This code ran successfully in " & SecondsElapsed & " seconds" & vbCrLf & "Approximately " & tickersPerSec & "per second", vbInformation
                                         
 End Sub
