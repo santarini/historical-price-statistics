@@ -9,6 +9,10 @@ Dim MainWB As Workbook
 Dim WB As Workbook
 Dim Rng As Range
 Dim RngNoPath As String
+Dim StartTime As Double
+Dim SecondsElapsed As Double
+
+StartTime = Timer
 
 'set this workbook as the main workbook
 
@@ -79,4 +83,9 @@ For FileNumber = 1 To Count 'you can change count to a constant for sample runs
     Set Rng = ActiveCell
     
 Next FileNumber
+                                        
+'tell me how long it took
+SecondsElapsed = Round(Timer - StartTime, 2)
+MsgBox "This code ran successfully in " & SecondsElapsed & " seconds", vbInformation
+                                        
 End Sub
