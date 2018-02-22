@@ -65,8 +65,9 @@ For FileNumber = 1 To Count 'you can change count to a constant for sample runs
     MainWB.Sheets.Add.Name = RngNoPath
     Range("A1").Select
     ActiveSheet.Paste
+    Selection.Columns.AutoFit
     
-    ''close file
+    'close file
     WB.Close
     
     'Worksheets("PathSet").Activate
