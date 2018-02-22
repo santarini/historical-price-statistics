@@ -8,6 +8,7 @@ Dim FileNumber As Integer
 Dim MainWB As Workbook
 Dim WB As Workbook
 Dim Rng As Range
+Dim RngNoPath As String
 
 'set this workbook as the main workbook
 
