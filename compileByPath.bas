@@ -42,7 +42,7 @@ Count = Selection.Rows.Count
 
 Rng.Select
 
-For FileNumber = 1 To Count
+For FileNumber = 1 To Count 'you can change count to a constant for sample runs
     
     'open the file
     
