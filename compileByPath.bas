@@ -87,7 +87,7 @@ Next FileNumber
                                         
 'tell me how long it took
 SecondsElapsed = Round(Timer - StartTime, 2)
-tickersPerSec = (Count / SecondsElapsed)
+tickersPerSec = Round(Count / SecondsElapsed, 2)
 MsgBox "This code ran successfully in " & SecondsElapsed & " seconds" & vbCrLf & "Approximately " & tickersPerSec & "per second", vbInformation
                                         
 End Sub
