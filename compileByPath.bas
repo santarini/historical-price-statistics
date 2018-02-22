@@ -66,6 +66,7 @@ For FileNumber = 1 To Count 'you can change count to a constant for sample runs
     Range("A1").Select
     ActiveSheet.Paste
     Selection.Columns.AutoFit
+    Range("A1").Select
     
     'close file
     WB.Close
