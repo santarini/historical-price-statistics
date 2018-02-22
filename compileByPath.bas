@@ -39,7 +39,6 @@ Set Rng = Range("A1")
 Rng.Select
 Range(Selection, Selection.End(xlDown)).Select
 Count = Selection.Rows.Count
-MsgBox Count
 
 Rng.Select
 
