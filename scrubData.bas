@@ -46,9 +46,7 @@ Function orderDataForGraphing()
     Range("A1").Select
     
 End Function
-
-
-Sub manipulateData()
+Function manipulateData()
     Dim Rng As Range
     Dim LastRow As Integer
     
@@ -102,4 +100,5 @@ Sub manipulateData()
     Selection.Style = "Percent"
     Selection.NumberFormat = "0.000%"
    
-End Sub
+End Function
+
