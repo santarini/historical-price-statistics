@@ -1,0 +1,37 @@
+Sub createSummary()
+
+    Dim Rng As Range
+    Set Rng = Range("A3")
+    Rng.Value = "Symbol"
+    Rng.Offset(0, 1) = "Date Data Start"
+    Rng.Offset(0, 2) = "Date Data End"
+    Rng.Offset(0, 3) = "Sample Size"
+    Rng.Offset(0, 4) = "Minimum"
+    Rng.Offset(0, 5) = "Maximum"
+    Rng.Offset(0, 6) = "Average"
+    Rng.Offset(0, 7) = "Minimum"
+    Rng.Offset(0, 8) = "Maximum"
+    Rng.Offset(0, 9) = "Average"
+    Rng.Offset(0, 10) = "Minimum"
+    Rng.Offset(0, 11) = "Maximum"
+    Rng.Offset(0, 12) = "Average"
+    Rng.Offset(0, 13) = "Minimum"
+    Rng.Offset(0, 14) = "Maximum"
+    Rng.Offset(0, 15) = "Average"
+    Rng.Offset(0, 16) = "Minimum"
+    Rng.Offset(0, 17) = "Maximum"
+    Rng.Offset(0, 18) = "Average"
+    Rng.Offset(0, 19) = "Minimum"
+    Rng.Offset(0, 20) = "Maximum"
+    Rng.Offset(0, 21) = "Average"
+    Rng.Offset(0, 22) = "Minimum"
+    Rng.Offset(0, 23) = "Maximum"
+    Rng.Offset(0, 24) = "Average"
+    Rng.Offset(0, 25) = "Minimum"
+    Rng.Offset(0, 26) = "Maximum"
+    Rng.Offset(0, 27) = "Average"
+    Rng.Offset(0, 28) = "Minimum"
+    Rng.Offset(0, 29) = "Maximum"
+    Rng.Offset(0, 30) = "Average"
+    
+End Sub
