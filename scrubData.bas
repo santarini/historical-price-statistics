@@ -75,24 +75,21 @@ Sub manipulateData()
     Range("I3").Select
     Application.CutCopyMode = False
     ActiveCell.FormulaR1C1 = "=RC[-1]/R[-1]C[-3]"
-    Range("J1").Select
-    ActiveCell.FormulaR1C1 = "Previous Open to Open"
+    Range("J1").Value = "Previous Open to Open"
     Range("J3").Select
     Application.CutCopyMode = False
     ActiveCell.FormulaR1C1 = "=RC[-7]-R[-1]C[-7]"
     Range("K3").Select
     Application.CutCopyMode = False
     ActiveCell.FormulaR1C1 = "=RC[-1]/R[-1]C[-8]"
-    Range("L1").Select
-    ActiveCell.FormulaR1C1 = "Previous Close to Open"
+    Range("L1").Value = "Previous Close to Open"
     Range("L3").Select
     Application.CutCopyMode = False
-    ActiveCell.FormulaR1C1 = "=RC[-1]/R[-1]C[-7]"
+    ActiveCell.FormulaR1C1 = "=RC[-9]-R[-1]C[-6]"
     Range("M3").Select
     Application.CutCopyMode = False
-    ActiveCell.FormulaR1C1 = "=RC[-10]/R[-1]C[-7]"
-    Range("N1").Select
-    ActiveCell.FormulaR1C1 = "Intraday Open to Close"
+    ActiveCell.FormulaR1C1 = "=RC[-1]/R[-1]C[-7]"
+    Range("N1").Value = "Intraday Open to Close"
     Range("N3").Select
     Application.CutCopyMode = False
     ActiveCell.FormulaR1C1 = "=RC[-8]-RC[-11]"
