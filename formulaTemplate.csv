@@ -1,0 +1,122 @@
+Description	Actual	Symbol		
+Description	Actual	StartDate		
+Description	Actual	EndDate		
+Volume	Actual	N	Vol	N
+Volume	Actual	Minimum	Vol	Minimum
+Volume	Actual	First Quintile	Vol	FirstQuintile
+Volume	Actual	First Decile	Vol	FirstDecile
+Volume	Actual	Lower Quartile	Vol	LowerQuartile
+Volume	Actual	Median	Vol	Median
+Volume	Actual	Upper Quartile	Vol	UpperQuartile
+Volume	Actual	Last Decile	Vol	LastDecile
+Volume	Actual	Last Quintile	Vol	LastQuintile
+Volume	Actual	Maximum	Vol	Maximum
+Volume	Actual	Mode	Vol	Mode
+Volume	Actual	Arithmetic Mean	Vol	ArithmeticMean
+Volume	Actual	Variance	Vol	Variance
+Volume	Actual	Standard Deviation	Vol	StandardDeviation
+Volume	Actual	Coefficient Of Variation	Vol	CoefficientOfVariation
+Volume	Actual	Kurtosis	Vol	Kurtosis
+Volume	Actual	Skewness	Vol	Skewness
+Previous Close to Close	Actual	N	CtoC	N
+Previous Close to Close	Actual	Minimum	CtoC	Minimum
+Previous Close to Close	Actual	First Quintile	CtoC	FirstQuintile
+Previous Close to Close	Actual	First Decile	CtoC	FirstDecile
+Previous Close to Close	Actual	Lower Quartile	CtoC	LowerQuartile
+Previous Close to Close	Actual	Median	CtoC	Median
+Previous Close to Close	Actual	Upper Quartile	CtoC	UpperQuartile
+Previous Close to Close	Actual	Last Decile	CtoC	LastDecile
+Previous Close to Close	Actual	Last Quintile	CtoC	LastQuintile
+Previous Close to Close	Actual	Maximum	CtoC	Maximum
+Previous Close to Close	Actual	Mode	CtoC	Mode
+Previous Close to Close	Actual	Arithmetic Mean	CtoC	ArithmeticMean
+Previous Close to Close	Actual	Variance	CtoC	Variance
+Previous Close to Close	Actual	Standard Deviation	CtoC	StandardDeviation
+Previous Close to Close	Actual	Coefficient Of Variation	CtoC	CoefficientOfVariation
+Previous Close to Close	Actual	Kurtosis	CtoC	Kurtosis
+Previous Close to Close	Actual	Skewness	CtoC	Skewness
+Previous Close to Close	Percent	N	CtoC	N
+Previous Close to Close	Percent	Minimum	CtoC	Minimum
+Previous Close to Close	Percent	First Quintile	CtoC	FirstQuintile
+Previous Close to Close	Percent	First Decile	CtoC	FirstDecile
+Previous Close to Close	Percent	Lower Quartile	CtoC	LowerQuartile
+Previous Close to Close	Percent	Median	CtoC	Median
+Previous Close to Close	Percent	Upper Quartile	CtoC	UpperQuartile
+Previous Close to Close	Percent	Last Decile	CtoC	LastDecile
+Previous Close to Close	Percent	Last Quintile	CtoC	LastQuintile
+Previous Close to Close	Percent	Maximum	CtoC	Maximum
+Previous Close to Close	Percent	Mode	CtoC	Mode
+Previous Close to Close	Percent	Arithmetic Mean	CtoC	ArithmeticMean
+Previous Close to Close	Percent	Variance	CtoC	Variance
+Previous Close to Close	Percent	Standard Deviation	CtoC	StandardDeviation
+Previous Close to Close	Percent	Coefficient Of Variation	CtoC	CoefficientOfVariation
+Previous Close to Close	Percent	Kurtosis	CtoC	Kurtosis
+Previous Close to Close	Percent	Skewness	CtoC	Skewness
+Previous Open to Open	Actual	N	OtoO	N
+Previous Open to Open	Actual	Minimum	OtoO	Minimum
+Previous Open to Open	Actual	First Quintile	OtoO	FirstQuintile
+Previous Open to Open	Actual	First Decile	OtoO	FirstDecile
+Previous Open to Open	Actual	Lower Quartile	OtoO	LowerQuartile
+Previous Open to Open	Actual	Median	OtoO	Median
+Previous Open to Open	Actual	Upper Quartile	OtoO	UpperQuartile
+Previous Open to Open	Actual	Last Decile	OtoO	LastDecile
+Previous Open to Open	Actual	Last Quintile	OtoO	LastQuintile
+Previous Open to Open	Actual	Maximum	OtoO	Maximum
+Previous Open to Open	Actual	Mode	OtoO	Mode
+Previous Open to Open	Actual	Arithmetic Mean	OtoO	ArithmeticMean
+Previous Open to Open	Actual	Variance	OtoO	Variance
+Previous Open to Open	Actual	Standard Deviation	OtoO	StandardDeviation
+Previous Open to Open	Actual	Coefficient Of Variation	OtoO	CoefficientOfVariation
+Previous Open to Open	Actual	Kurtosis	OtoO	Kurtosis
+Previous Open to Open	Actual	Skewness	OtoO	Skewness
+Previous Open to Open	Percent	N	OtoO	N
+Previous Open to Open	Percent	Minimum	OtoO	Minimum
+Previous Open to Open	Percent	First Quintile	OtoO	FirstQuintile
+Previous Open to Open	Percent	First Decile	OtoO	FirstDecile
+Previous Open to Open	Percent	Lower Quartile	OtoO	LowerQuartile
+Previous Open to Open	Percent	Median	OtoO	Median
+Previous Open to Open	Percent	Upper Quartile	OtoO	UpperQuartile
+Previous Open to Open	Percent	Last Decile	OtoO	LastDecile
+Previous Open to Open	Percent	Last Quintile	OtoO	LastQuintile
+Previous Open to Open	Percent	Maximum	OtoO	Maximum
+Previous Open to Open	Percent	Mode	OtoO	Mode
+Previous Open to Open	Percent	Arithmetic Mean	OtoO	ArithmeticMean
+Previous Open to Open	Percent	Variance	OtoO	Variance
+Previous Open to Open	Percent	Standard Deviation	OtoO	StandardDeviation
+Previous Open to Open	Percent	Coefficient Of Variation	OtoO	CoefficientOfVariation
+Previous Open to Open	Percent	Kurtosis	OtoO	Kurtosis
+Previous Open to Open	Percent	Skewness	OtoO	Skewness
+Intraday Open to Close	Actual	N	OtoC	N
+Intraday Open to Close	Actual	Minimum	OtoC	Minimum
+Intraday Open to Close	Actual	First Quintile	OtoC	FirstQuintile
+Intraday Open to Close	Actual	First Decile	OtoC	FirstDecile
+Intraday Open to Close	Actual	Lower Quartile	OtoC	LowerQuartile
+Intraday Open to Close	Actual	Median	OtoC	Median
+Intraday Open to Close	Actual	Upper Quartile	OtoC	UpperQuartile
+Intraday Open to Close	Actual	Last Decile	OtoC	LastDecile
+Intraday Open to Close	Actual	Last Quintile	OtoC	LastQuintile
+Intraday Open to Close	Actual	Maximum	OtoC	Maximum
+Intraday Open to Close	Actual	Mode	OtoC	Mode
+Intraday Open to Close	Actual	Arithmetic Mean	OtoC	ArithmeticMean
+Intraday Open to Close	Actual	Variance	OtoC	Variance
+Intraday Open to Close	Actual	Standard Deviation	OtoC	StandardDeviation
+Intraday Open to Close	Actual	Coefficient Of Variation	OtoC	CoefficientOfVariation
+Intraday Open to Close	Actual	Kurtosis	OtoC	Kurtosis
+Intraday Open to Close	Actual	Skewness	OtoC	Skewness
+Intraday Open to Close	Percent	N	OtoC	N
+Intraday Open to Close	Percent	Minimum	OtoC	Minimum
+Intraday Open to Close	Percent	First Quintile	OtoC	FirstQuintile
+Intraday Open to Close	Percent	First Decile	OtoC	FirstDecile
+Intraday Open to Close	Percent	Lower Quartile	OtoC	LowerQuartile
+Intraday Open to Close	Percent	Median	OtoC	Median
+Intraday Open to Close	Percent	Upper Quartile	OtoC	UpperQuartile
+Intraday Open to Close	Percent	Last Decile	OtoC	LastDecile
+Intraday Open to Close	Percent	Last Quintile	OtoC	LastQuintile
+Intraday Open to Close	Percent	Maximum	OtoC	Maximum
+Intraday Open to Close	Percent	Mode	OtoC	Mode
+Intraday Open to Close	Percent	Arithmetic Mean	OtoC	ArithmeticMean
+Intraday Open to Close	Percent	Variance	OtoC	Variance
+Intraday Open to Close	Percent	Standard Deviation	OtoC	StandardDeviation
+Intraday Open to Close	Percent	Coefficient Of Variation	OtoC	CoefficientOfVariation
+Intraday Open to Close	Percent	Kurtosis	OtoC	Kurtosis
+Intraday Open to Close	Percent	Skewness	OtoC	Skewness
