@@ -126,7 +126,7 @@ Function populateSummary(SummaryRng As Range)
     
     'define Previous Close to Close percent Range
     WS.Activate
-    Range("I2").Select
+    Range("I3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -142,6 +142,7 @@ Function populateSummary(SummaryRng As Range)
     CtoCLastDecilePercent = Application.WorksheetFunction.Percentile(Rng, 0.9)
     CtoCLastQuintilePercent = Application.WorksheetFunction.Percentile(Rng, 0.95)
     CtoCMaximumValPercent = Application.WorksheetFunction.Max(Rng)
+    CtoCArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
     CtoCVariancePercent = CtoCStandardDeviationPercent * CtoCStandardDeviationPercent
     CtoCStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
     CtoCCoefficientOfVariationPercent = CtoCStandardDeviationPercent / CtoCArithmeticMeanPercent
@@ -173,7 +174,7 @@ Function populateSummary(SummaryRng As Range)
 
     'define Previous Open to Open actual Range
     WS.Activate
-    Range("J2").Select
+    Range("J3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -191,8 +192,6 @@ Function populateSummary(SummaryRng As Range)
     OtoOMaximumValActual = Application.WorksheetFunction.Max(Rng)
     OtoOModeValActual = Application.WorksheetFunction.Mode(Rng)
     OtoOArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
-    OtoOGeometricMeanActual = Application.WorksheetFunction.GeoMean(Rng)
-    OtoOHarmonicMeanActual = Application.WorksheetFunction.HarMean(Rng)
     OtoOVarianceActual = OtoOStandardDeviationActual * OtoOStandardDeviationActual
     OtoOStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
     OtoOCoefficientOfVariationActual = OtoOStandardDeviationActual / OtoOArithmeticMeanActual
@@ -224,7 +223,7 @@ Function populateSummary(SummaryRng As Range)
 
     'define Previous Open to Open percent Range
     WS.Activate
-    Range("K2").Select
+    Range("K3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -242,8 +241,6 @@ Function populateSummary(SummaryRng As Range)
     OtoOMaximumValPercent = Application.WorksheetFunction.Max(Rng)
     OtoOModeValPercent = Application.WorksheetFunction.Mode(Rng)
     OtoOArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    OtoOGeometricMeanPercent = Application.WorksheetFunction.GeoMean(Rng)
-    OtoOHarmonicMeanPercent = Application.WorksheetFunction.HarMean(Rng)
     OtoOVariancePercent = OtoOStandardDeviationPercent * OtoOStandardDeviationPercent
     OtoOStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
     OtoOCoefficientOfVariationPercent = OtoOStandardDeviationPercent / OtoOArithmeticMeanPercent
@@ -275,7 +272,7 @@ Function populateSummary(SummaryRng As Range)
 
     'define Previous Close to Open actual Range
     WS.Activate
-    Range("L2").Select
+    Range("L3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -293,8 +290,6 @@ Function populateSummary(SummaryRng As Range)
     CtoOMaximumValActual = Application.WorksheetFunction.Max(Rng)
     CtoOModeValActual = Application.WorksheetFunction.Mode(Rng)
     CtoOArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
-    CtoOGeometricMeanActual = Application.WorksheetFunction.GeoMean(Rng)
-    CtoOHarmonicMeanActual = Application.WorksheetFunction.HarMean(Rng)
     CtoOVarianceActual = CtoOStandardDeviationActual * CtoOStandardDeviationActual
     CtoOStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
     CtoOCoefficientOfVariationActual = CtoOStandardDeviationActual / CtoOArithmeticMeanActual
@@ -326,7 +321,7 @@ Function populateSummary(SummaryRng As Range)
 
     'define Previous Close to Open percent Range
     WS.Activate
-    Range("M2").Select
+    Range("M3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -344,8 +339,6 @@ Function populateSummary(SummaryRng As Range)
     CtoOMaximumValPercent = Application.WorksheetFunction.Max(Rng)
     CtoOModeValPercent = Application.WorksheetFunction.Mode(Rng)
     CtoOArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    CtoOGeometricMeanPercent = Application.WorksheetFunction.GeoMean(Rng)
-    CtoOHarmonicMeanPercent = Application.WorksheetFunction.HarMean(Rng)
     CtoOVariancePercent = CtoOStandardDeviationPercent * CtoOStandardDeviationPercent
     CtoOStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
     CtoOCoefficientOfVariationPercent = CtoOStandardDeviationPercent / CtoOArithmeticMeanPercent
@@ -378,7 +371,7 @@ Function populateSummary(SummaryRng As Range)
     
     'define Intraday Open to Close actual Range
     WS.Activate
-    Range("N2").Select
+    Range("N3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -396,8 +389,6 @@ Function populateSummary(SummaryRng As Range)
     OtoCMaximumValActual = Application.WorksheetFunction.Max(Rng)
     OtoCModeValActual = Application.WorksheetFunction.Mode(Rng)
     OtoCArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
-    OtoCGeometricMeanActual = Application.WorksheetFunction.GeoMean(Rng)
-    OtoCHarmonicMeanActual = Application.WorksheetFunction.HarMean(Rng)
     OtoCVarianceActual = OtoCStandardDeviationActual * OtoCStandardDeviationActual
     OtoCStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
     OtoCCoefficientOfVariationActual = OtoCStandardDeviationActual / OtoCArithmeticMeanActual
@@ -429,7 +420,7 @@ Function populateSummary(SummaryRng As Range)
     
     'define Intraday Open to Close percent Range
     WS.Activate
-    Range("O2").Select
+    Range("O3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -447,8 +438,6 @@ Function populateSummary(SummaryRng As Range)
     OtoCMaximumValPercent = Application.WorksheetFunction.Max(Rng)
     OtoCModeValPercent = Application.WorksheetFunction.Mode(Rng)
     OtoCArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    OtoCGeometricMeanPercent = Application.WorksheetFunction.GeoMean(Rng)
-    OtoCHarmonicMeanPercent = Application.WorksheetFunction.HarMean(Rng)
     OtoCVariancePercent = OtoCStandardDeviationPercent * OtoCStandardDeviationPercent
     OtoCStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
     OtoCCoefficientOfVariationPercent = OtoCStandardDeviationPercent / OtoCArithmeticMeanPercent
