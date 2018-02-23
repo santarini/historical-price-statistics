@@ -1,27 +1,28 @@
-Function populateSummary()
+Function populateSummary(SummaryRng As Range)
 
     Dim WS As Worksheet
     Dim StartDate, EndDate As Date
     Dim Count, LastRow As Integer
-    Dim Rng, SummaryRng As Range
+    Dim VolNActual, VolMinimumActual, VolFirstQuintileActual, VolFirstDecileActual, VolLowerQuartileActual, VolMedianActual, VolUpperQuartileActual, VolLastDecileActual, VolLastQuintileActual, VolMaximumActual, VolModeActual, VolArithmeticMeanActual, VolVarianceActual, VolStandardDeviationActual, VolCoefficientOfVariationActual, VolKurtosisActual, VolSkewnessActual As Double
+    Dim CtoCNActual, CtoCMinimumActual, CtoCFirstQuintileActual, CtoCFirstDecileActual, CtoCLowerQuartileActual, CtoCMedianActual, CtoCUpperQuartileActual, CtoCLastDecileActual, CtoCLastQuintileActual, CtoCMaximumActual, CtoCModeActual, CtoCArithmeticMeanActual, CtoCVarianceActual, CtoCStandardDeviationActual, CtoCCoefficientOfVariationActual, CtoCKurtosisActual, CtoCSkewnessActual, CtoCNPercent, CtoCMinimumPercent, CtoCFirstQuintilePercent, CtoCFirstDecilePercent, CtoCLowerQuartilePercent, CtoCMedianPercent, CtoCUpperQuartilePercent, CtoCLastDecilePercent, CtoCLastQuintilePercent, CtoCMaximumPercent, CtoCModePercent, CtoCArithmeticMeanPercent, CtoCVariancePercent, CtoCStandardDeviationPercent, CtoCCoefficientOfVariationPercent, CtoCKurtosisPercent, CtoCSkewnessPercent As Double
+    Dim OtoONActual, OtoOMinimumActual, OtoOFirstQuintileActual, OtoOFirstDecileActual, OtoOLowerQuartileActual, OtoOMedianActual, OtoOUpperQuartileActual, OtoOLastDecileActual, OtoOLastQuintileActual, OtoOMaximumActual, OtoOModeActual, OtoOArithmeticMeanActual, OtoOVarianceActual, OtoOStandardDeviationActual, OtoOCoefficientOfVariationActual, OtoOKurtosisActual, OtoOSkewnessActual, OtoONPercent, OtoOMinimumPercent, OtoOFirstQuintilePercent, OtoOFirstDecilePercent, OtoOLowerQuartilePercent, OtoOMedianPercent, OtoOUpperQuartilePercent, OtoOLastDecilePercent, OtoOLastQuintilePercent, OtoOMaximumPercent, OtoOModePercent, OtoOArithmeticMeanPercent, OtoOVariancePercent, OtoOStandardDeviationPercent, OtoOCoefficientOfVariationPercent, OtoOKurtosisPercent, OtoOSkewnessPercent As Double
+    Dim OtoCNActual, OtoCMinimumActual, OtoCFirstQuintileActual, OtoCFirstDecileActual, OtoCLowerQuartileActual, OtoCMedianActual, OtoCUpperQuartileActual, OtoCLastDecileActual, OtoCLastQuintileActual, OtoCMaximumActual, OtoCModeActual, OtoCArithmeticMeanActual, OtoCVarianceActual, OtoCStandardDeviationActual, OtoCCoefficientOfVariationActual, OtoCKurtosisActual, OtoCSkewnessActual, OtoCNPercent, OtoCMinimumPercent, OtoCFirstQuintilePercent, OtoCFirstDecilePercent, OtoCLowerQuartilePercent, OtoCMedianPercent, OtoCUpperQuartilePercent, OtoCLastDecilePercent, OtoCLastQuintilePercent, OtoCMaximumPercent, OtoCModePercent, OtoCArithmeticMeanPercent, OtoCVariancePercent, OtoCStandardDeviationPercent, OtoCCoefficientOfVariationPercent, OtoCKurtosisPercent, OtoCSkewnessPercent As Double
+    Dim Rng As Range
     
     Set WS = ActiveSheet
-    
-    Worksheets("Summary").Activate
-    
-    Set SummaryRng = Range("A4")
     
     WS.Activate
     
     'get dates
     Set Rng = Range("A2")
     Rng.Select
+    StartDate = Selection
     Selection.End(xlDown).Select
     EndDate = Selection
 
     'paste dates
     Worksheets("Summary").Activate
-    SummaryRng.Value = RngNoPath
+    SummaryRng.Value = WS.Name
     SummaryRng.Offset(0, 1).Value = StartDate
     SummaryRng.Offset(0, 2).Value = EndDate
     
@@ -45,8 +46,6 @@ Function populateSummary()
     VolMaximumVal = Application.WorksheetFunction.Max(Rng)
     VolModeVal = Application.WorksheetFunction.Mode(Rng)
     VolArithmeticMean = Application.WorksheetFunction.Average(Rng)
-    VolGeometricMean = Application.WorksheetFunction.GeoMean(Rng)
-    VolHarmonicMean = Application.WorksheetFunction.HarMean(Rng)
     VolVariance = VolStandardDeviation * VolStandardDeviation
     VolStandardDeviation = Application.WorksheetFunction.StDev_P(Rng)
     VolCoefficientOfVariation = VolStandardDeviation / VolArithmeticMean
@@ -79,7 +78,7 @@ Function populateSummary()
     
     'define Previous Close to Close actual Range
     WS.Activate
-    Range("H2").Select
+    Range("H3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
@@ -97,8 +96,6 @@ Function populateSummary()
     CtoCMaximumValActual = Application.WorksheetFunction.Max(Rng)
     CtoCModeValActual = Application.WorksheetFunction.Mode(Rng)
     CtoCArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
-    CtoCGeometricMeanActual = Application.WorksheetFunction.GeoMean(Rng)
-    CtoCHarmonicMeanActual = Application.WorksheetFunction.HarMean(Rng)
     CtoCVarianceActual = CtoCStandardDeviationActual * CtoCStandardDeviationActual
     CtoCStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
     CtoCCoefficientOfVariationActual = CtoCStandardDeviationActual / CtoCArithmeticMeanActual
@@ -145,10 +142,6 @@ Function populateSummary()
     CtoCLastDecilePercent = Application.WorksheetFunction.Percentile(Rng, 0.9)
     CtoCLastQuintilePercent = Application.WorksheetFunction.Percentile(Rng, 0.95)
     CtoCMaximumValPercent = Application.WorksheetFunction.Max(Rng)
-    CtoCModeValPercent = Application.WorksheetFunction.Mode(Rng)
-    CtoCArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    CtoCGeometricMeanPercent = Application.WorksheetFunction.GeoMean(Rng)
-    CtoCHarmonicMeanPercent = Application.WorksheetFunction.HarMean(Rng)
     CtoCVariancePercent = CtoCStandardDeviationPercent * CtoCStandardDeviationPercent
     CtoCStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
     CtoCCoefficientOfVariationPercent = CtoCStandardDeviationPercent / CtoCArithmeticMeanPercent
@@ -383,14 +376,14 @@ Function populateSummary()
     SummaryRng.Offset(0, 135).Value = CtoOSkewnessPercent
 
     
-    'define Previous Open to Close actual Range
+    'define Intraday Open to Close actual Range
     WS.Activate
     Range("N2").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng = Selection
     LastRow = Selection.Rows.Count
     
-    'calculate Previous Open to Close actual stats
+    'calculate Intraday Open to Close actual stats
     OtoCNActual = LastRow
     OtoCMinimumValActual = Application.WorksheetFunction.Min(Rng)
     OtoCFirstQuintileActual = Application.WorksheetFunction.Percentile(Rng, 0.05)
@@ -412,7 +405,7 @@ Function populateSummary()
     OtoCSkewnessActual = Application.WorksheetFunction.Skew_p(Rng)
 
     
-    'paste Previous Open to Close actual stats
+    'paste Intraday Open to Close actual stats
     Worksheets("Summary").Activate
     SummaryRng.Offset(0, 136).Value = OtoCNActual
     SummaryRng.Offset(0, 137).Value = OtoCMinimumValActual
@@ -434,7 +427,7 @@ Function populateSummary()
     SummaryRng.Offset(0, 153).Value = OtoCKurtosisActual
     SummaryRng.Offset(0, 154).Value = OtoCSkewnessActual
     
-    'define Previous Open to Close percent Range
+    'define Intraday Open to Close percent Range
     WS.Activate
     Range("O2").Select
     Range(Selection, Selection.End(xlDown)).Select
@@ -463,7 +456,7 @@ Function populateSummary()
     OtoCSkewnessPercent = Application.WorksheetFunction.Skew_p(Rng)
 
     
-    'paste Previous Open to Close percent stats
+    'paste Intraday Open to Close percent stats
     Worksheets("Summary").Activate
     SummaryRng.Offset(0, 155).Value = OtoCNPercent
     SummaryRng.Offset(0, 156).Value = OtoCMinimumValPercent
