@@ -98,5 +98,8 @@ Sub manipulateData()
     ActiveCell.FormulaR1C1 = "=RC[-1]/RC[-9]"
     Range("H3:O3").Select
     Selection.AutoFill Destination:=Range("H3:O" & LastRow)
+    Range("I:I,K:K,M:M,O:O").Select
+    Selection.Style = "Percent"
+    Selection.NumberFormat = "0.000%"
    
 End Sub
