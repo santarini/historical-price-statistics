@@ -88,7 +88,7 @@ For FileNumber = 1 To 10 'you can change count to a constant for sample runs
     
     ''
     'POPULATE SUMMARY PAGE HERE
-    '
+    Worksheets("Summary").Activate
     '
     
     
