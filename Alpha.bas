@@ -603,7 +603,13 @@ Rng.Offset(2, 155).Value = "Skewness"
         .ReadingOrder = xlContext
     End With
     Selection.Columns.AutoFit
-    
+
+'color cells
+    Range("D1:T1").Interior.ColorIndex = 6
+    Range("U1:BB1").Interior.ColorIndex = 39
+    Range("BC1:CJ1").Interior.ColorIndex = 38
+    Range("CK1:DR1").Interior.ColorIndex = 35
+    Range("DS1:EZ1").Interior.ColorIndex = 34
 
 Range("A1").Select
 
