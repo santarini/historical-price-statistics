@@ -54,25 +54,24 @@ Function populateSummary(SummaryRng As Range)
 
     'paste volume actual stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 3).Value = VolN
-    SummaryRng.Offset(0, 4).Value = VolMinimumVal
-    SummaryRng.Offset(0, 5).Value = VolFirstQuintile
-    SummaryRng.Offset(0, 6).Value = VolFirstDecile
-    SummaryRng.Offset(0, 7).Value = VolLowerQuartile
-    SummaryRng.Offset(0, 8).Value = VolMedian
-    SummaryRng.Offset(0, 9).Value = VolUpperQuartile
-    SummaryRng.Offset(0, 10).Value = VolLastDecile
-    SummaryRng.Offset(0, 11).Value = VolLastQuintile
-    SummaryRng.Offset(0, 12).Value = VolMaximumVal
-    SummaryRng.Offset(0, 13).Value = VolModeVal
-    SummaryRng.Offset(0, 14).Value = VolArithmeticMean
-    SummaryRng.Offset(0, 15).Value = VolGeometricMean
-    SummaryRng.Offset(0, 16).Value = VolHarmonicMean
-    SummaryRng.Offset(0, 17).Value = VolVariance
-    SummaryRng.Offset(0, 18).Value = VolStandardDeviation
-    SummaryRng.Offset(0, 19).Value = VolCoefficientOfVariation
-    SummaryRng.Offset(0, 20).Value = VolKurtosis
-    SummaryRng.Offset(0, 21).Value = VolSkewness
+    SummaryRng.Offset(0, 3).Value = VolNActual
+    SummaryRng.Offset(0, 4).Value = VolMinimumActual
+    SummaryRng.Offset(0, 5).Value = VolFirstQuintileActual
+    SummaryRng.Offset(0, 6).Value = VolFirstDecileActual
+    SummaryRng.Offset(0, 7).Value = VolLowerQuartileActual
+    SummaryRng.Offset(0, 8).Value = VolMedianActual
+    SummaryRng.Offset(0, 9).Value = VolUpperQuartileActual
+    SummaryRng.Offset(0, 10).Value = VolLastDecileActual
+    SummaryRng.Offset(0, 11).Value = VolLastQuintileActual
+    SummaryRng.Offset(0, 12).Value = VolMaximumActual
+    SummaryRng.Offset(0, 13).Value = VolModeActual
+    SummaryRng.Offset(0, 14).Value = VolArithmeticMeanActual
+    SummaryRng.Offset(0, 15).Value = VolVarianceActual
+    SummaryRng.Offset(0, 16).Value = VolStandardDeviationActual
+    SummaryRng.Offset(0, 17).Value = VolCoefficientOfVariationActual
+    SummaryRng.Offset(0, 18).Value = VolKurtosisActual
+    SummaryRng.Offset(0, 19).Value = VolSkewnessActual
+
     
     
     
@@ -104,25 +103,23 @@ Function populateSummary(SummaryRng As Range)
 
     'paste Previous Close to Close actual stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 22).Value = CtoCNActual
-    SummaryRng.Offset(0, 23).Value = CtoCMinimumValActual
-    SummaryRng.Offset(0, 24).Value = CtoCFirstQuintileActual
-    SummaryRng.Offset(0, 25).Value = CtoCFirstDecileActual
-    SummaryRng.Offset(0, 26).Value = CtoCLowerQuartileActual
-    SummaryRng.Offset(0, 27).Value = CtoCMedianActual
-    SummaryRng.Offset(0, 28).Value = CtoCUpperQuartileActual
-    SummaryRng.Offset(0, 29).Value = CtoCLastDecileActual
-    SummaryRng.Offset(0, 30).Value = CtoCLastQuintileActual
-    SummaryRng.Offset(0, 31).Value = CtoCMaximumValActual
-    SummaryRng.Offset(0, 32).Value = CtoCModeValActual
-    SummaryRng.Offset(0, 33).Value = CtoCArithmeticMeanActual
-    SummaryRng.Offset(0, 34).Value = CtoCGeometricMeanActual
-    SummaryRng.Offset(0, 35).Value = CtoCHarmonicMeanActual
-    SummaryRng.Offset(0, 36).Value = CtoCVarianceActual
-    SummaryRng.Offset(0, 37).Value = CtoCStandardDeviationActual
-    SummaryRng.Offset(0, 38).Value = CtoCCoefficientOfVariationActual
-    SummaryRng.Offset(0, 39).Value = CtoCKurtosisActual
-    SummaryRng.Offset(0, 40).Value = CtoCSkewnessActual
+    SummaryRng.Offset(0, 20).Value = CtoCNActual
+    SummaryRng.Offset(0, 21).Value = CtoCMinimumActual
+    SummaryRng.Offset(0, 22).Value = CtoCFirstQuintileActual
+    SummaryRng.Offset(0, 23).Value = CtoCFirstDecileActual
+    SummaryRng.Offset(0, 24).Value = CtoCLowerQuartileActual
+    SummaryRng.Offset(0, 25).Value = CtoCMedianActual
+    SummaryRng.Offset(0, 26).Value = CtoCUpperQuartileActual
+    SummaryRng.Offset(0, 27).Value = CtoCLastDecileActual
+    SummaryRng.Offset(0, 28).Value = CtoCLastQuintileActual
+    SummaryRng.Offset(0, 29).Value = CtoCMaximumActual
+    SummaryRng.Offset(0, 30).Value = CtoCModeActual
+    SummaryRng.Offset(0, 31).Value = CtoCArithmeticMeanActual
+    SummaryRng.Offset(0, 32).Value = CtoCVarianceActual
+    SummaryRng.Offset(0, 33).Value = CtoCStandardDeviationActual
+    SummaryRng.Offset(0, 34).Value = CtoCCoefficientOfVariationActual
+    SummaryRng.Offset(0, 35).Value = CtoCKurtosisActual
+    SummaryRng.Offset(0, 36).Value = CtoCSkewnessActual
     
     'define Previous Close to Close percent Range
     WS.Activate
@@ -151,25 +148,24 @@ Function populateSummary(SummaryRng As Range)
 
     'paste Previous Close to Close percent stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 41).Value = CtoCNPercent
-    SummaryRng.Offset(0, 42).Value = CtoCMinimumValPercent
-    SummaryRng.Offset(0, 43).Value = CtoCFirstQuintilePercent
-    SummaryRng.Offset(0, 44).Value = CtoCFirstDecilePercent
-    SummaryRng.Offset(0, 45).Value = CtoCLowerQuartilePercent
-    SummaryRng.Offset(0, 46).Value = CtoCMedianPercent
-    SummaryRng.Offset(0, 47).Value = CtoCUpperQuartilePercent
-    SummaryRng.Offset(0, 48).Value = CtoCLastDecilePercent
-    SummaryRng.Offset(0, 49).Value = CtoCLastQuintilePercent
-    SummaryRng.Offset(0, 50).Value = CtoCMaximumValPercent
-    SummaryRng.Offset(0, 51).Value = CtoCModeValPercent
-    SummaryRng.Offset(0, 52).Value = CtoCArithmeticMeanPercent
-    SummaryRng.Offset(0, 53).Value = CtoCGeometricMeanPercent
-    SummaryRng.Offset(0, 54).Value = CtoCHarmonicMeanPercent
-    SummaryRng.Offset(0, 55).Value = CtoCVariancePercent
-    SummaryRng.Offset(0, 56).Value = CtoCStandardDeviationPercent
-    SummaryRng.Offset(0, 57).Value = CtoCCoefficientOfVariationPercent
-    SummaryRng.Offset(0, 58).Value = CtoCKurtosisPercent
-    SummaryRng.Offset(0, 59).Value = CtoCSkewnessPercent
+    SummaryRng.Offset(0, 37).Value = CtoCNPercent
+    SummaryRng.Offset(0, 38).Value = CtoCMinimumPercent
+    SummaryRng.Offset(0, 39).Value = CtoCFirstQuintilePercent
+    SummaryRng.Offset(0, 40).Value = CtoCFirstDecilePercent
+    SummaryRng.Offset(0, 41).Value = CtoCLowerQuartilePercent
+    SummaryRng.Offset(0, 42).Value = CtoCMedianPercent
+    SummaryRng.Offset(0, 43).Value = CtoCUpperQuartilePercent
+    SummaryRng.Offset(0, 44).Value = CtoCLastDecilePercent
+    SummaryRng.Offset(0, 45).Value = CtoCLastQuintilePercent
+    SummaryRng.Offset(0, 46).Value = CtoCMaximumPercent
+    SummaryRng.Offset(0, 47).Value = CtoCModePercent
+    SummaryRng.Offset(0, 48).Value = CtoCArithmeticMeanPercent
+    SummaryRng.Offset(0, 49).Value = CtoCVariancePercent
+    SummaryRng.Offset(0, 50).Value = CtoCStandardDeviationPercent
+    SummaryRng.Offset(0, 51).Value = CtoCCoefficientOfVariationPercent
+    SummaryRng.Offset(0, 52).Value = CtoCKurtosisPercent
+    SummaryRng.Offset(0, 53).Value = CtoCSkewnessPercent
+
 
 
     'define Previous Open to Open actual Range
@@ -201,25 +197,23 @@ Function populateSummary(SummaryRng As Range)
     
     'paste Previous Open to Open actual stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 60).Value = OtoONActual
-    SummaryRng.Offset(0, 61).Value = OtoOMinimumValActual
-    SummaryRng.Offset(0, 62).Value = OtoOFirstQuintileActual
-    SummaryRng.Offset(0, 63).Value = OtoOFirstDecileActual
-    SummaryRng.Offset(0, 64).Value = OtoOLowerQuartileActual
-    SummaryRng.Offset(0, 65).Value = OtoOMedianActual
-    SummaryRng.Offset(0, 66).Value = OtoOUpperQuartileActual
-    SummaryRng.Offset(0, 67).Value = OtoOLastDecileActual
-    SummaryRng.Offset(0, 68).Value = OtoOLastQuintileActual
-    SummaryRng.Offset(0, 69).Value = OtoOMaximumValActual
-    SummaryRng.Offset(0, 70).Value = OtoOModeValActual
-    SummaryRng.Offset(0, 71).Value = OtoOArithmeticMeanActual
-    SummaryRng.Offset(0, 72).Value = OtoOGeometricMeanActual
-    SummaryRng.Offset(0, 73).Value = OtoOHarmonicMeanActual
-    SummaryRng.Offset(0, 74).Value = OtoOVarianceActual
-    SummaryRng.Offset(0, 75).Value = OtoOStandardDeviationActual
-    SummaryRng.Offset(0, 76).Value = OtoOCoefficientOfVariationActual
-    SummaryRng.Offset(0, 77).Value = OtoOKurtosisActual
-    SummaryRng.Offset(0, 78).Value = OtoOSkewnessActual
+    SummaryRng.Offset(0, 54).Value = OtoONActual
+    SummaryRng.Offset(0, 55).Value = OtoOMinimumActual
+    SummaryRng.Offset(0, 56).Value = OtoOFirstQuintileActual
+    SummaryRng.Offset(0, 57).Value = OtoOFirstDecileActual
+    SummaryRng.Offset(0, 58).Value = OtoOLowerQuartileActual
+    SummaryRng.Offset(0, 59).Value = OtoOMedianActual
+    SummaryRng.Offset(0, 60).Value = OtoOUpperQuartileActual
+    SummaryRng.Offset(0, 61).Value = OtoOLastDecileActual
+    SummaryRng.Offset(0, 62).Value = OtoOLastQuintileActual
+    SummaryRng.Offset(0, 63).Value = OtoOMaximumActual
+    SummaryRng.Offset(0, 64).Value = OtoOModeActual
+    SummaryRng.Offset(0, 65).Value = OtoOArithmeticMeanActual
+    SummaryRng.Offset(0, 66).Value = OtoOVarianceActual
+    SummaryRng.Offset(0, 67).Value = OtoOStandardDeviationActual
+    SummaryRng.Offset(0, 68).Value = OtoOCoefficientOfVariationActual
+    SummaryRng.Offset(0, 69).Value = OtoOKurtosisActual
+    SummaryRng.Offset(0, 70).Value = OtoOSkewnessActual
 
     'define Previous Open to Open percent Range
     WS.Activate
@@ -250,25 +244,24 @@ Function populateSummary(SummaryRng As Range)
     
     'paste Previous Open to Open percent stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 79).Value = OtoONPercent
-    SummaryRng.Offset(0, 80).Value = OtoOMinimumValPercent
-    SummaryRng.Offset(0, 81).Value = OtoOFirstQuintilePercent
-    SummaryRng.Offset(0, 82).Value = OtoOFirstDecilePercent
-    SummaryRng.Offset(0, 83).Value = OtoOLowerQuartilePercent
-    SummaryRng.Offset(0, 84).Value = OtoOMedianPercent
-    SummaryRng.Offset(0, 85).Value = OtoOUpperQuartilePercent
-    SummaryRng.Offset(0, 86).Value = OtoOLastDecilePercent
-    SummaryRng.Offset(0, 87).Value = OtoOLastQuintilePercent
-    SummaryRng.Offset(0, 88).Value = OtoOMaximumValPercent
-    SummaryRng.Offset(0, 89).Value = OtoOModeValPercent
-    SummaryRng.Offset(0, 90).Value = OtoOArithmeticMeanPercent
-    SummaryRng.Offset(0, 91).Value = OtoOGeometricMeanPercent
-    SummaryRng.Offset(0, 92).Value = OtoOHarmonicMeanPercent
-    SummaryRng.Offset(0, 93).Value = OtoOVariancePercent
-    SummaryRng.Offset(0, 94).Value = OtoOStandardDeviationPercent
-    SummaryRng.Offset(0, 95).Value = OtoOCoefficientOfVariationPercent
-    SummaryRng.Offset(0, 96).Value = OtoOKurtosisPercent
-    SummaryRng.Offset(0, 97).Value = OtoOSkewnessPercent
+    SummaryRng.Offset(0, 71).Value = OtoONPercent
+    SummaryRng.Offset(0, 72).Value = OtoOMinimumPercent
+    SummaryRng.Offset(0, 73).Value = OtoOFirstQuintilePercent
+    SummaryRng.Offset(0, 74).Value = OtoOFirstDecilePercent
+    SummaryRng.Offset(0, 75).Value = OtoOLowerQuartilePercent
+    SummaryRng.Offset(0, 76).Value = OtoOMedianPercent
+    SummaryRng.Offset(0, 77).Value = OtoOUpperQuartilePercent
+    SummaryRng.Offset(0, 78).Value = OtoOLastDecilePercent
+    SummaryRng.Offset(0, 79).Value = OtoOLastQuintilePercent
+    SummaryRng.Offset(0, 80).Value = OtoOMaximumPercent
+    SummaryRng.Offset(0, 81).Value = OtoOModePercent
+    SummaryRng.Offset(0, 82).Value = OtoOArithmeticMeanPercent
+    SummaryRng.Offset(0, 83).Value = OtoOVariancePercent
+    SummaryRng.Offset(0, 84).Value = OtoOStandardDeviationPercent
+    SummaryRng.Offset(0, 85).Value = OtoOCoefficientOfVariationPercent
+    SummaryRng.Offset(0, 86).Value = OtoOKurtosisPercent
+    SummaryRng.Offset(0, 87).Value = OtoOSkewnessPercent
+
 
     'define Previous Close to Open actual Range
     WS.Activate
@@ -299,25 +292,24 @@ Function populateSummary(SummaryRng As Range)
     
     'paste Previous Close to Open actual stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 98).Value = CtoONActual
-    SummaryRng.Offset(0, 99).Value = CtoOMinimumValActual
-    SummaryRng.Offset(0, 100).Value = CtoOFirstQuintileActual
-    SummaryRng.Offset(0, 101).Value = CtoOFirstDecileActual
-    SummaryRng.Offset(0, 102).Value = CtoOLowerQuartileActual
-    SummaryRng.Offset(0, 103).Value = CtoOMedianActual
-    SummaryRng.Offset(0, 104).Value = CtoOUpperQuartileActual
-    SummaryRng.Offset(0, 105).Value = CtoOLastDecileActual
-    SummaryRng.Offset(0, 106).Value = CtoOLastQuintileActual
-    SummaryRng.Offset(0, 107).Value = CtoOMaximumValActual
-    SummaryRng.Offset(0, 108).Value = CtoOModeValActual
-    SummaryRng.Offset(0, 109).Value = CtoOArithmeticMeanActual
-    SummaryRng.Offset(0, 110).Value = CtoOGeometricMeanActual
-    SummaryRng.Offset(0, 111).Value = CtoOHarmonicMeanActual
-    SummaryRng.Offset(0, 112).Value = CtoOVarianceActual
-    SummaryRng.Offset(0, 113).Value = CtoOStandardDeviationActual
-    SummaryRng.Offset(0, 114).Value = CtoOCoefficientOfVariationActual
-    SummaryRng.Offset(0, 115).Value = CtoOKurtosisActual
-    SummaryRng.Offset(0, 116).Value = CtoOSkewnessActual
+    SummaryRng.Offset(0, 88).Value = CtoONActual
+    SummaryRng.Offset(0, 89).Value = CtoOMinimumActual
+    SummaryRng.Offset(0, 90).Value = CtoOFirstQuintileActual
+    SummaryRng.Offset(0, 91).Value = CtoOFirstDecileActual
+    SummaryRng.Offset(0, 92).Value = CtoOLowerQuartileActual
+    SummaryRng.Offset(0, 93).Value = CtoOMedianActual
+    SummaryRng.Offset(0, 94).Value = CtoOUpperQuartileActual
+    SummaryRng.Offset(0, 95).Value = CtoOLastDecileActual
+    SummaryRng.Offset(0, 96).Value = CtoOLastQuintileActual
+    SummaryRng.Offset(0, 97).Value = CtoOMaximumActual
+    SummaryRng.Offset(0, 98).Value = CtoOModeActual
+    SummaryRng.Offset(0, 99).Value = CtoOArithmeticMeanActual
+    SummaryRng.Offset(0, 100).Value = CtoOVarianceActual
+    SummaryRng.Offset(0, 101).Value = CtoOStandardDeviationActual
+    SummaryRng.Offset(0, 102).Value = CtoOCoefficientOfVariationActual
+    SummaryRng.Offset(0, 103).Value = CtoOKurtosisActual
+    SummaryRng.Offset(0, 104).Value = CtoOSkewnessActual
+
 
     'define Previous Close to Open percent Range
     WS.Activate
@@ -348,25 +340,24 @@ Function populateSummary(SummaryRng As Range)
     
     'paste Previous Close to Open percent stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 117).Value = CtoONPercent
-    SummaryRng.Offset(0, 118).Value = CtoOMinimumValPercent
-    SummaryRng.Offset(0, 119).Value = CtoOFirstQuintilePercent
-    SummaryRng.Offset(0, 120).Value = CtoOFirstDecilePercent
-    SummaryRng.Offset(0, 121).Value = CtoOLowerQuartilePercent
-    SummaryRng.Offset(0, 122).Value = CtoOMedianPercent
-    SummaryRng.Offset(0, 123).Value = CtoOUpperQuartilePercent
-    SummaryRng.Offset(0, 124).Value = CtoOLastDecilePercent
-    SummaryRng.Offset(0, 125).Value = CtoOLastQuintilePercent
-    SummaryRng.Offset(0, 126).Value = CtoOMaximumValPercent
-    SummaryRng.Offset(0, 127).Value = CtoOModeValPercent
-    SummaryRng.Offset(0, 128).Value = CtoOArithmeticMeanPercent
-    SummaryRng.Offset(0, 129).Value = CtoOGeometricMeanPercent
-    SummaryRng.Offset(0, 130).Value = CtoOHarmonicMeanPercent
-    SummaryRng.Offset(0, 131).Value = CtoOVariancePercent
-    SummaryRng.Offset(0, 132).Value = CtoOStandardDeviationPercent
-    SummaryRng.Offset(0, 133).Value = CtoOCoefficientOfVariationPercent
-    SummaryRng.Offset(0, 134).Value = CtoOKurtosisPercent
-    SummaryRng.Offset(0, 135).Value = CtoOSkewnessPercent
+    SummaryRng.Offset(0, 105).Value = CtoONPercent
+    SummaryRng.Offset(0, 106).Value = CtoOMinimumPercent
+    SummaryRng.Offset(0, 107).Value = CtoOFirstQuintilePercent
+    SummaryRng.Offset(0, 108).Value = CtoOFirstDecilePercent
+    SummaryRng.Offset(0, 109).Value = CtoOLowerQuartilePercent
+    SummaryRng.Offset(0, 110).Value = CtoOMedianPercent
+    SummaryRng.Offset(0, 111).Value = CtoOUpperQuartilePercent
+    SummaryRng.Offset(0, 112).Value = CtoOLastDecilePercent
+    SummaryRng.Offset(0, 113).Value = CtoOLastQuintilePercent
+    SummaryRng.Offset(0, 114).Value = CtoOMaximumPercent
+    SummaryRng.Offset(0, 115).Value = CtoOModePercent
+    SummaryRng.Offset(0, 116).Value = CtoOArithmeticMeanPercent
+    SummaryRng.Offset(0, 117).Value = CtoOVariancePercent
+    SummaryRng.Offset(0, 118).Value = CtoOStandardDeviationPercent
+    SummaryRng.Offset(0, 119).Value = CtoOCoefficientOfVariationPercent
+    SummaryRng.Offset(0, 120).Value = CtoOKurtosisPercent
+    SummaryRng.Offset(0, 121).Value = CtoOSkewnessPercent
+
 
     
     'define Intraday Open to Close actual Range
@@ -398,25 +389,24 @@ Function populateSummary(SummaryRng As Range)
     
     'paste Intraday Open to Close actual stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 136).Value = OtoCNActual
-    SummaryRng.Offset(0, 137).Value = OtoCMinimumValActual
-    SummaryRng.Offset(0, 138).Value = OtoCFirstQuintileActual
-    SummaryRng.Offset(0, 139).Value = OtoCFirstDecileActual
-    SummaryRng.Offset(0, 140).Value = OtoCLowerQuartileActual
-    SummaryRng.Offset(0, 141).Value = OtoCMedianActual
-    SummaryRng.Offset(0, 142).Value = OtoCUpperQuartileActual
-    SummaryRng.Offset(0, 143).Value = OtoCLastDecileActual
-    SummaryRng.Offset(0, 144).Value = OtoCLastQuintileActual
-    SummaryRng.Offset(0, 145).Value = OtoCMaximumValActual
-    SummaryRng.Offset(0, 146).Value = OtoCModeValActual
-    SummaryRng.Offset(0, 147).Value = OtoCArithmeticMeanActual
-    SummaryRng.Offset(0, 148).Value = OtoCGeometricMeanActual
-    SummaryRng.Offset(0, 149).Value = OtoCHarmonicMeanActual
-    SummaryRng.Offset(0, 150).Value = OtoCVarianceActual
-    SummaryRng.Offset(0, 151).Value = OtoCStandardDeviationActual
-    SummaryRng.Offset(0, 152).Value = OtoCCoefficientOfVariationActual
-    SummaryRng.Offset(0, 153).Value = OtoCKurtosisActual
-    SummaryRng.Offset(0, 154).Value = OtoCSkewnessActual
+    SummaryRng.Offset(0, 122).Value = OtoCNActual
+    SummaryRng.Offset(0, 123).Value = OtoCMinimumActual
+    SummaryRng.Offset(0, 124).Value = OtoCFirstQuintileActual
+    SummaryRng.Offset(0, 125).Value = OtoCFirstDecileActual
+    SummaryRng.Offset(0, 126).Value = OtoCLowerQuartileActual
+    SummaryRng.Offset(0, 127).Value = OtoCMedianActual
+    SummaryRng.Offset(0, 128).Value = OtoCUpperQuartileActual
+    SummaryRng.Offset(0, 129).Value = OtoCLastDecileActual
+    SummaryRng.Offset(0, 130).Value = OtoCLastQuintileActual
+    SummaryRng.Offset(0, 131).Value = OtoCMaximumActual
+    SummaryRng.Offset(0, 132).Value = OtoCModeActual
+    SummaryRng.Offset(0, 133).Value = OtoCArithmeticMeanActual
+    SummaryRng.Offset(0, 134).Value = OtoCVarianceActual
+    SummaryRng.Offset(0, 135).Value = OtoCStandardDeviationActual
+    SummaryRng.Offset(0, 136).Value = OtoCCoefficientOfVariationActual
+    SummaryRng.Offset(0, 137).Value = OtoCKurtosisActual
+    SummaryRng.Offset(0, 138).Value = OtoCSkewnessActual
+
     
     'define Intraday Open to Close percent Range
     WS.Activate
@@ -447,24 +437,23 @@ Function populateSummary(SummaryRng As Range)
     
     'paste Intraday Open to Close percent stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 155).Value = OtoCNPercent
-    SummaryRng.Offset(0, 156).Value = OtoCMinimumValPercent
-    SummaryRng.Offset(0, 157).Value = OtoCFirstQuintilePercent
-    SummaryRng.Offset(0, 158).Value = OtoCFirstDecilePercent
-    SummaryRng.Offset(0, 159).Value = OtoCLowerQuartilePercent
-    SummaryRng.Offset(0, 160).Value = OtoCMedianPercent
-    SummaryRng.Offset(0, 161).Value = OtoCUpperQuartilePercent
-    SummaryRng.Offset(0, 162).Value = OtoCLastDecilePercent
-    SummaryRng.Offset(0, 163).Value = OtoCLastQuintilePercent
-    SummaryRng.Offset(0, 164).Value = OtoCMaximumValPercent
-    SummaryRng.Offset(0, 165).Value = OtoCModeValPercent
-    SummaryRng.Offset(0, 166).Value = OtoCArithmeticMeanPercent
-    SummaryRng.Offset(0, 167).Value = OtoCGeometricMeanPercent
-    SummaryRng.Offset(0, 168).Value = OtoCHarmonicMeanPercent
-    SummaryRng.Offset(0, 169).Value = OtoCVariancePercent
-    SummaryRng.Offset(0, 170).Value = OtoCStandardDeviationPercent
-    SummaryRng.Offset(0, 171).Value = OtoCCoefficientOfVariationPercent
-    SummaryRng.Offset(0, 172).Value = OtoCKurtosisPercent
-    SummaryRng.Offset(0, 173).Value = OtoCSkewnessPercent
+    SummaryRng.Offset(0, 139).Value = OtoCNPercent
+    SummaryRng.Offset(0, 140).Value = OtoCMinimumPercent
+    SummaryRng.Offset(0, 141).Value = OtoCFirstQuintilePercent
+    SummaryRng.Offset(0, 142).Value = OtoCFirstDecilePercent
+    SummaryRng.Offset(0, 143).Value = OtoCLowerQuartilePercent
+    SummaryRng.Offset(0, 144).Value = OtoCMedianPercent
+    SummaryRng.Offset(0, 145).Value = OtoCUpperQuartilePercent
+    SummaryRng.Offset(0, 146).Value = OtoCLastDecilePercent
+    SummaryRng.Offset(0, 147).Value = OtoCLastQuintilePercent
+    SummaryRng.Offset(0, 148).Value = OtoCMaximumPercent
+    SummaryRng.Offset(0, 149).Value = OtoCModePercent
+    SummaryRng.Offset(0, 150).Value = OtoCArithmeticMeanPercent
+    SummaryRng.Offset(0, 151).Value = OtoCVariancePercent
+    SummaryRng.Offset(0, 152).Value = OtoCStandardDeviationPercent
+    SummaryRng.Offset(0, 153).Value = OtoCCoefficientOfVariationPercent
+    SummaryRng.Offset(0, 154).Value = OtoCKurtosisPercent
+    SummaryRng.Offset(0, 155).Value = OtoCSkewnessPercent
+
     
 End Function
