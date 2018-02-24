@@ -591,7 +591,7 @@ Rng.Offset(2, 155).Value = "Skewness"
 
 'center and auto-width those three rows
     
-    Range("A1:AE3").Select
+    Range("A1:EZ3").Select
     With Selection
         .HorizontalAlignment = xlCenter
         .VerticalAlignment = xlBottom
