@@ -46,31 +46,32 @@ Function populateSummary(SummaryRng As Range)
     VolMaximumVal = Application.WorksheetFunction.Max(Rng)
     VolModeVal = Application.WorksheetFunction.Mode(Rng)
     VolArithmeticMean = Application.WorksheetFunction.Average(Rng)
-    VolVariance = VolStandardDeviation * VolStandardDeviation
     VolStandardDeviation = Application.WorksheetFunction.StDev_P(Rng)
+    VolVariance = VolStandardDeviation * VolStandardDeviation
     VolCoefficientOfVariation = VolStandardDeviation / VolArithmeticMean
     VolKurtosis = Application.WorksheetFunction.Kurt(Rng)
     VolSkewness = Application.WorksheetFunction.Skew_p(Rng)
 
     'paste volume actual stats
     Worksheets("Summary").Activate
-    SummaryRng.Offset(0, 3).Value = VolNActual
-    SummaryRng.Offset(0, 4).Value = VolMinimumActual
-    SummaryRng.Offset(0, 5).Value = VolFirstQuintileActual
-    SummaryRng.Offset(0, 6).Value = VolFirstDecileActual
-    SummaryRng.Offset(0, 7).Value = VolLowerQuartileActual
-    SummaryRng.Offset(0, 8).Value = VolMedianActual
-    SummaryRng.Offset(0, 9).Value = VolUpperQuartileActual
-    SummaryRng.Offset(0, 10).Value = VolLastDecileActual
-    SummaryRng.Offset(0, 11).Value = VolLastQuintileActual
-    SummaryRng.Offset(0, 12).Value = VolMaximumActual
-    SummaryRng.Offset(0, 13).Value = VolModeActual
-    SummaryRng.Offset(0, 14).Value = VolArithmeticMeanActual
-    SummaryRng.Offset(0, 15).Value = VolVarianceActual
-    SummaryRng.Offset(0, 16).Value = VolStandardDeviationActual
-    SummaryRng.Offset(0, 17).Value = VolCoefficientOfVariationActual
-    SummaryRng.Offset(0, 18).Value = VolKurtosisActual
-    SummaryRng.Offset(0, 19).Value = VolSkewnessActual
+    SummaryRng.Offset(0, 3).Value = VolN
+    SummaryRng.Offset(0, 4).Value = VolMinimumVal
+    SummaryRng.Offset(0, 5).Value = VolFirstQuintile
+    SummaryRng.Offset(0, 6).Value = VolFirstDecile
+    SummaryRng.Offset(0, 7).Value = VolLowerQuartile
+    SummaryRng.Offset(0, 8).Value = VolMedian
+    SummaryRng.Offset(0, 9).Value = VolUpperQuartile
+    SummaryRng.Offset(0, 10).Value = VolLastDecile
+    SummaryRng.Offset(0, 11).Value = VolLastQuintile
+    SummaryRng.Offset(0, 12).Value = VolMaximumVal
+    SummaryRng.Offset(0, 13).Value = VolModeVal
+    SummaryRng.Offset(0, 14).Value = VolArithmeticMean
+    SummaryRng.Offset(0, 15).Value = VolVariance
+    SummaryRng.Offset(0, 16).Value = VolStandardDeviation
+    SummaryRng.Offset(0, 17).Value = VolCoefficientOfVariation
+    SummaryRng.Offset(0, 18).Value = VolKurtosis
+    SummaryRng.Offset(0, 19).Value = VolSkewness
+
 
     
     
@@ -95,8 +96,8 @@ Function populateSummary(SummaryRng As Range)
     CtoCMaximumValActual = Application.WorksheetFunction.Max(Rng)
     CtoCModeValActual = Application.WorksheetFunction.Mode(Rng)
     CtoCArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
-    CtoCVarianceActual = CtoCStandardDeviationActual * CtoCStandardDeviationActual
     CtoCStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
+    CtoCVarianceActual = CtoCStandardDeviationActual * CtoCStandardDeviationActual
     CtoCCoefficientOfVariationActual = CtoCStandardDeviationActual / CtoCArithmeticMeanActual
     CtoCKurtosisActual = Application.WorksheetFunction.Kurt(Rng)
     CtoCSkewnessActual = Application.WorksheetFunction.Skew_p(Rng)
@@ -140,8 +141,8 @@ Function populateSummary(SummaryRng As Range)
     CtoCLastQuintilePercent = Application.WorksheetFunction.Percentile(Rng, 0.95)
     CtoCMaximumValPercent = Application.WorksheetFunction.Max(Rng)
     CtoCArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    CtoCVariancePercent = CtoCStandardDeviationPercent * CtoCStandardDeviationPercent
     CtoCStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
+    CtoCVariancePercent = CtoCStandardDeviationPercent * CtoCStandardDeviationPercent
     CtoCCoefficientOfVariationPercent = CtoCStandardDeviationPercent / CtoCArithmeticMeanPercent
     CtoCKurtosisPercent = Application.WorksheetFunction.Kurt(Rng)
     CtoCSkewnessPercent = Application.WorksheetFunction.Skew_p(Rng)
@@ -189,8 +190,8 @@ Function populateSummary(SummaryRng As Range)
     OtoOModeValActual = Application.WorksheetFunction.Mode(Rng)
     OtoOArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
     OtoOVarianceActual = OtoOStandardDeviationActual * OtoOStandardDeviationActual
-    OtoOStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
     OtoOCoefficientOfVariationActual = OtoOStandardDeviationActual / OtoOArithmeticMeanActual
+    OtoOStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
     OtoOKurtosisActual = Application.WorksheetFunction.Kurt(Rng)
     OtoOSkewnessActual = Application.WorksheetFunction.Skew_p(Rng)
 
@@ -235,8 +236,8 @@ Function populateSummary(SummaryRng As Range)
     OtoOMaximumValPercent = Application.WorksheetFunction.Max(Rng)
     OtoOModeValPercent = Application.WorksheetFunction.Mode(Rng)
     OtoOArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    OtoOVariancePercent = OtoOStandardDeviationPercent * OtoOStandardDeviationPercent
     OtoOStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
+    OtoOVariancePercent = OtoOStandardDeviationPercent * OtoOStandardDeviationPercent
     OtoOCoefficientOfVariationPercent = OtoOStandardDeviationPercent / OtoOArithmeticMeanPercent
     OtoOKurtosisPercent = Application.WorksheetFunction.Kurt(Rng)
     OtoOSkewnessPercent = Application.WorksheetFunction.Skew_p(Rng)
@@ -283,8 +284,8 @@ Function populateSummary(SummaryRng As Range)
     CtoOMaximumValActual = Application.WorksheetFunction.Max(Rng)
     CtoOModeValActual = Application.WorksheetFunction.Mode(Rng)
     CtoOArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
-    CtoOVarianceActual = CtoOStandardDeviationActual * CtoOStandardDeviationActual
     CtoOStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
+    CtoOVarianceActual = CtoOStandardDeviationActual * CtoOStandardDeviationActual
     CtoOCoefficientOfVariationActual = CtoOStandardDeviationActual / CtoOArithmeticMeanActual
     CtoOKurtosisActual = Application.WorksheetFunction.Kurt(Rng)
     CtoOSkewnessActual = Application.WorksheetFunction.Skew_p(Rng)
@@ -331,8 +332,8 @@ Function populateSummary(SummaryRng As Range)
     CtoOMaximumValPercent = Application.WorksheetFunction.Max(Rng)
     CtoOModeValPercent = Application.WorksheetFunction.Mode(Rng)
     CtoOArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    CtoOVariancePercent = CtoOStandardDeviationPercent * CtoOStandardDeviationPercent
     CtoOStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
+    CtoOVariancePercent = CtoOStandardDeviationPercent * CtoOStandardDeviationPercent
     CtoOCoefficientOfVariationPercent = CtoOStandardDeviationPercent / CtoOArithmeticMeanPercent
     CtoOKurtosisPercent = Application.WorksheetFunction.Kurt(Rng)
     CtoOSkewnessPercent = Application.WorksheetFunction.Skew_p(Rng)
@@ -380,8 +381,8 @@ Function populateSummary(SummaryRng As Range)
     OtoCMaximumValActual = Application.WorksheetFunction.Max(Rng)
     OtoCModeValActual = Application.WorksheetFunction.Mode(Rng)
     OtoCArithmeticMeanActual = Application.WorksheetFunction.Average(Rng)
-    OtoCVarianceActual = OtoCStandardDeviationActual * OtoCStandardDeviationActual
     OtoCStandardDeviationActual = Application.WorksheetFunction.StDev_P(Rng)
+    OtoCVarianceActual = OtoCStandardDeviationActual * OtoCStandardDeviationActual
     OtoCCoefficientOfVariationActual = OtoCStandardDeviationActual / OtoCArithmeticMeanActual
     OtoCKurtosisActual = Application.WorksheetFunction.Kurt(Rng)
     OtoCSkewnessActual = Application.WorksheetFunction.Skew_p(Rng)
@@ -428,8 +429,8 @@ Function populateSummary(SummaryRng As Range)
     OtoCMaximumValPercent = Application.WorksheetFunction.Max(Rng)
     OtoCModeValPercent = Application.WorksheetFunction.Mode(Rng)
     OtoCArithmeticMeanPercent = Application.WorksheetFunction.Average(Rng)
-    OtoCVariancePercent = OtoCStandardDeviationPercent * OtoCStandardDeviationPercent
     OtoCStandardDeviationPercent = Application.WorksheetFunction.StDev_P(Rng)
+    OtoCVariancePercent = OtoCStandardDeviationPercent * OtoCStandardDeviationPercent
     OtoCCoefficientOfVariationPercent = OtoCStandardDeviationPercent / OtoCArithmeticMeanPercent
     OtoCKurtosisPercent = Application.WorksheetFunction.Kurt(Rng)
     OtoCSkewnessPercent = Application.WorksheetFunction.Skew_p(Rng)
