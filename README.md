@@ -1,7 +1,7 @@
 # Description
 
-<a>historicalPrices.py</a> is a Python script that pulls historical prices of companies using Pandas Data Reader and puts them into indvidual CSVs.
-<a>Alpha.bas</a> is a Visual Basic script that populates a spreadsheet with the all the resulting CSVs, scrubs and resamples the data, and then cacluates descriptive statistics for each.
+<a href="https://github.com/santarini/pandas-datareader/blob/master/historicalPrices.py">historicalPrices.py</a> is a Python script that pulls historical prices of companies using Pandas Data Reader and puts them into indvidual CSVs.
+<a href="https://github.com/santarini/pandas-datareader/blob/master/Alpha.bas">Alpha.bas</a> is a Visual Basic script that populates a spreadsheet with the all the resulting CSVs, scrubs and resamples the data, and then cacluates descriptive statistics for each.
 
 # Table of Contents
 
