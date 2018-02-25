@@ -10,12 +10,23 @@
 * README.md
   * Is what you're reading right meow.
 * compileByPath.bas
+  * The main routine of Alpha.bas
 * createSummaryPage.bas
+  * Function that creates a summary worksheet in an excel workbook
 * formulaStructure.csv
+  * Workbook used to help write all the formulas in this script
 * getSP500Tickers.py
+  * Python script that pulls S&P 500 tickers from wikipeida and puts them in an CSV
+  * Taken from Sentdex (Harrison)
 * historicalPrices.py
+  *  Python script that pulls historical prices of companies using Pandas Data Reader and puts them into indvidual CSVs.
 * manipulateData.bas
+  * Resamples data to find changes between periods
 * orderDataForGraphing.bas
+  * Move columns around so that they can be graphed in Excel easily
 * populateSummary.bas
+  * Populates the Summary page with Descriptive Statistics taken from each imported CSV
 * sandp500.csv
+  * CSV containing all the constiuent tickers in the S & P 500
 * scrubData.bas
+  * Adds commas and dollar signs
