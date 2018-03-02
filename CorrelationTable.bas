@@ -52,16 +52,16 @@ For i = 1 To Count:
         CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
         Worksheets("CorrelationPage").Select
         TrgtRng = CorrelationVar
-        TrgtRng.Offset(0, j).Select
+        TrgtRng.Offset(0, 1).Select
         Set TrgtRng = Selection
-        Rng2.Offset(0, j).Select
+        Rng2.Offset(0, 1).Select
         Set Rng2 = Selection
         Company2 = Rng1.Value
     Next j
     Worksheets("CorrelationPage").Select
-    Rng1.Offset(i, 1).Select
+    Rng1.Offset(1, 1).Select
     Set TrgtRng = Selection
-    Rng1.Offset(i, 0).Select
+    Rng1.Offset(1, 0).Select
     Set Rng1 = Selection
     Company1 = Rng1.Value
 Next i
