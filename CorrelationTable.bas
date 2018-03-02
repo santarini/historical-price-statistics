@@ -1,25 +1,51 @@
+Option Explicit
+Function CorrelationTable()
 
-'go to summary page
-'a4 select
-'select all filled cells beneath A4
-'count rows in selection
-'copy selection
+Dim Count As Integer
+Dim Company1 As Range
+Dim Company2 As Range
+Dim TrgtRng As Range
+Dim i As Integer
+Dim j As Integer
 
-'create CorrelationPage
-'A2 select
-'paste values
-'Set Company1 to A2
 
-'b1 select
-'paste values (trasnposed)
-'Set Company2 to B1
 
-'b2 select
-'set TrgtRng
 
-'for i to count
-    'define Rng1 path using Company1
-    'go to Company1 Sheet
+
+
+
+
+
+
+'go to summary page, a4 select
+Worksheets("Summary").Select
+Range("A4").Select
+Range(Selection, Selection.End(xlDown)).Select
+Count = Selection.Rows.Count
+Selection.Copy
+
+MsgBox Count
+
+Sheets.Add.Name = "CorrelationPage"
+Worksheets("CorrelationPage").Select
+Range("A2").Select
+ActiveSheet.Paste
+Range("A2").Select
+Set Company1 = Selection
+
+Range("B1").Select
+Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:=False, Transpose:=True
+Range("B1").Select
+Set Company2 = Selection
+
+Range("B2").Select
+Set TrgtRng = Selection
+
+j = 0
+
+For i = 0 To Count:
+    Company1.Select
+    Range("O3").Select
     'set Rng1 Range
     'for j to count
         'define Rng2 path using Company2
@@ -34,4 +60,7 @@
     'next j
     'navigate to CorrelationPage page
     'offset Company1
-'next i
+Next i
+
+
+End Function
