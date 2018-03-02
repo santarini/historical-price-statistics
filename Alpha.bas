@@ -611,7 +611,12 @@ Rng.Offset(2, 155).Value = "Skewness"
     Range("CK1:DR1").Interior.ColorIndex = 35
     Range("DS1:EZ1").Interior.ColorIndex = 34
 
-Range("A1").Select
+'freeze panes                                                    
+    Range("B4").Select
+    ActiveWindow.FreezePanes = True                                                
+    
+'reset cursor
+    Range("A1").Select
 
     
 End Function
