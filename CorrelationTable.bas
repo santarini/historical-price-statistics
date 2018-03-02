@@ -44,11 +44,12 @@ For i = 1 To Count:
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng3 = Selection
     For j = 1 To Count
+    On Error Resume Next
         Worksheets(Company2).Select
         Range("O3").Select
         Range(Selection, Selection.End(xlDown)).Select
         Set Rng4 = Selection
-                CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
+        CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
         Worksheets("CorrelationPage").Select
         TrgtRng = CorrelationVar
         TrgtRng.Offset(0, j).Select
