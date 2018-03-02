@@ -1,8 +1,20 @@
+
 'go to summary page
-'set Company1 and Company2 to A4
-'count rows in column
+'a4 select
+'select all filled cells beneath A4
+'count rows in selection
+'copy selection
 
 'create CorrelationPage
+'A2 select
+'paste values
+'Set Company1 to A2
+
+'b1 select
+'paste values (trasnposed)
+'Set Company2 to B1
+
+'b2 select
 'set TrgtRng
 
 'for i to count
@@ -17,9 +29,9 @@
         'CorrelationVar = Application.WorksheetFunction.Correl(Rng1, Rng2)
         'navigate to the CorrelationPage
         'paste the CorrelationVar value into TrgtRng
-        'navigate to summary page
+        'navigate to CorrelationPage page
         'offset Company2
     'next j
-    'navigate to summary page
+    'navigate to CorrelationPage page
     'offset Company1
 'next i
