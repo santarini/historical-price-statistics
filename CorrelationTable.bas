@@ -4,29 +4,21 @@ Function CorrelationTable()
 Dim Count As Integer
 Dim Rng1 As Range
 Dim Rng2 As Range
+Dim Rng3 As Range
+Dim Rng4 As Range
 Dim Company1 As String
 Dim Company2 As String
 Dim TrgtRng As Range
 Dim i As Integer
 Dim j As Integer
+Dim CorrelationVar As Single
 
-
-
-
-
-
-
-
-
-
-'go to summary page, a4 select
 Worksheets("Summary").Select
 Range("A4").Select
 Range(Selection, Selection.End(xlDown)).Select
 Count = Selection.Rows.Count
 Selection.Copy
 
-MsgBox Count
 
 Sheets.Add.Name = "CorrelationPage"
 Worksheets("CorrelationPage").Select
@@ -46,25 +38,29 @@ Company2 = Rng1.Value
 Range("B2").Select
 Set TrgtRng = Selection
 
-j = 0
-
-For i = 0 To Count:
+For i = 1 To Count:
     Worksheets(Company1).Select
     Range("O3").Select
-    'set Rng1 Range
-    'for j to count
-        'define Rng2 path using Company2
-        'go to Company2 Sheet
-        'set Rng2 Range
-        'find the correlation of the two variables
-        'CorrelationVar = Application.WorksheetFunction.Correl(Rng1, Rng2)
-        'navigate to the CorrelationPage
-        'paste the CorrelationVar value into TrgtRng
-        'navigate to CorrelationPage page
-        'offset Company2
-    'next j
-    'navigate to CorrelationPage page
-    'offset Company1
+    Range(Selection, Selection.End(xlDown)).Select
+    Set Rng3 = Selection
+    For j = 0 To Count
+        Worksheets(Company2).Select
+        Range("O3").Select
+        Range(Selection, Selection.End(xlDown)).Select
+        Set Rng4 = Selection
+        CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
+        Worksheets("CorrelationPage").Select
+        TrgtRng = CorrelationVar
+        TrgtRng.Offset(0, j).Select
+        TrgtRng = Selection
+        Rng2.Offset(0, j).Select
+        Rng2 = Selection
+    Next j
+    Worksheets("CorrelationPage").Select
+    Rng1.Offset(i, 1).Select
+    TrgtRng = Selection
+    Rng1.Offset(i, 0).Select
+    Rng1 = Selection
 Next i
 
 
