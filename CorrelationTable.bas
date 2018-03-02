@@ -56,14 +56,14 @@ For i = 1 To Count:
         Set TrgtRng = Selection
         Rng2.Offset(0, 1).Select
         Set Rng2 = Selection
-        Company2 = Rng1.Value
+        Company2 = Rng2
     Next j
     Worksheets("CorrelationPage").Select
     Rng1.Offset(1, 1).Select
     Set TrgtRng = Selection
     Rng1.Offset(1, 0).Select
     Set Rng1 = Selection
-    Company1 = Rng1.Value
+    Company1 = Rng1
 Next i
 
 
