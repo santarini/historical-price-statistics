@@ -43,24 +43,26 @@ For i = 1 To Count:
     Range("O3").Select
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng3 = Selection
-    For j = 0 To Count
+    For j = 1 To Count
         Worksheets(Company2).Select
         Range("O3").Select
         Range(Selection, Selection.End(xlDown)).Select
         Set Rng4 = Selection
-        CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
+                CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
         Worksheets("CorrelationPage").Select
         TrgtRng = CorrelationVar
         TrgtRng.Offset(0, j).Select
-        TrgtRng = Selection
+        Set TrgtRng = Selection
         Rng2.Offset(0, j).Select
-        Rng2 = Selection
+        Set Rng2 = Selection
+        Company2 = Rng1.Value
     Next j
     Worksheets("CorrelationPage").Select
     Rng1.Offset(i, 1).Select
-    TrgtRng = Selection
+    Set TrgtRng = Selection
     Rng1.Offset(i, 0).Select
-    Rng1 = Selection
+    Set Rng1 = Selection
+    Company1 = Rng1.Value
 Next i
 
 
