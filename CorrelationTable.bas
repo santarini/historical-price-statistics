@@ -2,8 +2,10 @@ Option Explicit
 Function CorrelationTable()
 
 Dim Count As Integer
-Dim Company1 As Range
-Dim Company2 As Range
+Dim Rng1 As Range
+Dim Rng2 As Range
+Dim Company1 As String
+Dim Company2 As String
 Dim TrgtRng As Range
 Dim i As Integer
 Dim j As Integer
@@ -31,12 +33,15 @@ Worksheets("CorrelationPage").Select
 Range("A2").Select
 ActiveSheet.Paste
 Range("A2").Select
-Set Company1 = Selection
+Set Rng1 = Selection
+Company1 = Rng1.Value
+
 
 Range("B1").Select
 Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:=False, Transpose:=True
 Range("B1").Select
-Set Company2 = Selection
+Set Rng2 = Selection
+Company2 = Rng1.Value
 
 Range("B2").Select
 Set TrgtRng = Selection
@@ -44,7 +49,7 @@ Set TrgtRng = Selection
 j = 0
 
 For i = 0 To Count:
-    Company1.Select
+    Worksheets(Company1).Select
     Range("O3").Select
     'set Rng1 Range
     'for j to count
