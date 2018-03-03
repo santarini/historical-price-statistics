@@ -59,6 +59,9 @@ For i = 1 To Count:
         Company2 = Rng2
     Next j
     Worksheets("CorrelationPage").Select
+    Range("B1").Select
+    Set Rng2 = Selection
+    Company2 = Rng1.Value
     Rng1.Offset(1, 1).Select
     Set TrgtRng = Selection
     Rng1.Offset(1, 0).Select
