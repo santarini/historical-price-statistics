@@ -44,14 +44,19 @@ For i = 1 To Count:
     Range(Selection, Selection.End(xlDown)).Select
     Set Rng3 = Selection
     For j = 1 To Count
-    On Error Resume Next
+    On Error GoTo -1
         Worksheets(Company2).Select
         Range("O3").Select
         Range(Selection, Selection.End(xlDown)).Select
         Set Rng4 = Selection
-        CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
-        Worksheets("CorrelationPage").Select
-        TrgtRng = CorrelationVar
+        If (Rng3.Rows.Count <> Rng4.Rows.Count) Then
+            Worksheets("CorrelationPage").Select
+            TrgtRng = "N/A"
+        Else
+            CorrelationVar = Application.WorksheetFunction.Correl(Rng3, Rng4)
+            Worksheets("CorrelationPage").Select
+            TrgtRng = CorrelationVar
+        End If
         TrgtRng.Offset(0, 1).Select
         Set TrgtRng = Selection
         Rng2.Offset(0, 1).Select
@@ -68,6 +73,4 @@ For i = 1 To Count:
     Set Rng1 = Selection
     Company1 = Rng1
 Next i
-
-
 End Function
