@@ -106,6 +106,18 @@ Function CorrelationTable()
             .TintAndShade = 0
         End With
         
+        'bold first row and column
+        Rows("1:1").Select
+        Selection.Font.Bold = True
+        Columns("A:A").Select
+        Selection.Font.Bold = True
+        
+        'Freeze Panes
+        Range("B2").Select
+        ActiveWindow.FreezePanes = True
+        
+        
+        'Reset selected cell for good measure
         Range("A1").Select
 
 End Function
