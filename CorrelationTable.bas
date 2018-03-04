@@ -66,7 +66,7 @@ Function CorrelationTable()
             Worksheets("CorrelationPage").Select
             Range("B1").Select
             Set Rng2 = Selection
-            Company2 = Rng1.Value
+            Company2 = Rng2.Value
             Rng1.Offset(1, 1).Select
             Set TrgtRng = Selection
             Rng1.Offset(1, 0).Select
