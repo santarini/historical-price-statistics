@@ -1,14 +1,12 @@
-#taken from Sentdex (Harrison)
-
 import bs4 as bs
 import datetime as dt
 import os
 import pandas as pd
 import pandas_datareader.data as web
-import pickle
+import csv
 import requests
 
-def save_sp500_tickers():
+def getSP500TickersCSV():
     resp = requests.get('http://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
     soup = bs.BeautifulSoup(resp.text, 'lxml')
     table = soup.find('table', {'class': 'wikitable sortable'})
@@ -16,10 +14,13 @@ def save_sp500_tickers():
     for row in table.findAll('tr')[1:]:
         ticker = row.findAll('td')[0].text
         tickers.append(ticker)
-        
-    with open("sp500tickers.pickle","wb") as f:
-        pickle.dump(tickers,f)
-        
-    return tickers
 
-save_sp500_tickers()
+    with open('SandP500.csv', 'a') as csvfile:
+        fieldnames = ['Ticker']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames, lineterminator = '\n')
+        writer.writeheader()
+        for x in tickers:
+            writer.writerow({'Ticker': x})
+    print(tickers)
+
+getSP500TickersCSV()
