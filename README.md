@@ -36,6 +36,9 @@
 # System Requirements
 
 Python
+
 Microsoft Excel
+
 Beautiful Soup
+
 Pandas DataReader
