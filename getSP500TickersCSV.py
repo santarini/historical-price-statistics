@@ -1,10 +1,6 @@
-import bs4 as bs
-import datetime as dt
-import os
-import pandas as pd
-import pandas_datareader.data as web
-import csv
 import requests
+import bs4 as bs
+import csv
 
 def getSP500TickersCSV():
     resp = requests.get('http://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
