@@ -32,3 +32,10 @@
   * CSV containing all the constiuent tickers in the S & P 500
 * scrubData.bas
   * Adds commas and dollar signs
+
+# System Requirements
+
+Python
+Microsoft Excel
+Beautiful Soup
+Pandas DataReader
