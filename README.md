@@ -33,7 +33,7 @@
 * scrubData.bas
   * Adds commas and dollar signs
 
-# System Requirements
+# Prerequisites
 
 Python
 
