@@ -1,4 +1,4 @@
-# Description
+# Historical Price Statistics
 
 <a href="https://github.com/santarini/pandas-datareader/blob/master/getSP500TickersCSV.py">getSP500TickersCSV.py</a> is a Python script that use Beautiful Soup to scrape S & P 500 Tickers from <a href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies">Wikipedia</a> and then creates a CSV of those tickers.
 
@@ -6,7 +6,7 @@
 
 <a href="https://github.com/santarini/pandas-datareader/blob/master/Alpha.bas">Alpha.bas</a> is a Visual Basic script that populates a spreadsheet with data from external CSVs, scrubs and resamples the data, and then cacluates descriptive statistics for each.
 
-# Table of Contents
+## Table of Contents
 
 * Alpha.bas
   * Populates a spreadsheet with data from other CSVs and run descriptive statistics on that data.
@@ -33,7 +33,7 @@
 * scrubData.bas
   * Adds commas and dollar signs
 
-# Prerequisites
+## Prerequisites
 
 Python
 
