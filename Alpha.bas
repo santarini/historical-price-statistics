@@ -764,6 +764,7 @@ Function populateSummary(SummaryRng As Range)
     LastRow = Selection.Rows.Count
     
     'calculate volume actual stats
+    On Error Resume Next
     VolN = LastRow
     VolMinimumVal = Application.WorksheetFunction.Min(Rng)
     VolFirstQuintile = Application.WorksheetFunction.Percentile(Rng, 0.05)
