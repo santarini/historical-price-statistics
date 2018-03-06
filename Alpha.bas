@@ -751,7 +751,8 @@ Function populateSummary(SummaryRng As Range)
 
     'paste dates
     Worksheets("Summary").Activate
-    SummaryRng.Value = WS.Name
+    SummaryRng.Select
+    ActiveSheet.Hyperlinks.Add Anchor:=Selection, Address:="", SubAddress:=WS.Name & "!A1", TextToDisplay:=WS.Name
     SummaryRng.Offset(0, 1).Value = StartDate
     SummaryRng.Offset(0, 2).Value = EndDate
     
