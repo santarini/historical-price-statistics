@@ -26,6 +26,7 @@ def getHistoricalData(startTicker, endTicker):
                 end = dt.datetime(2018,1,1)
                 df = web.DataReader(ticker, 'morningstar', start, end)
                 df.to_csv('stock_dfs/{}.csv'.format(ticker))
+                print("Finished " + ticker)
             else:
                 print('Already have {}'.format(ticker))
 
