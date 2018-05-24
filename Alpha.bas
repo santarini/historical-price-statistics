@@ -717,7 +717,7 @@ Function manipulateData()
     ActiveCell.FormulaR1C1 = "=RC[-8]-RC[-11]"
     Range("O3").Select
     Application.CutCopyMode = False
-    ActiveCell.FormulaR1C1 = "=RC[-1]/RC[-9]"
+    ActiveCell.FormulaR1C1 = "=RC[-1]/RC[-12]"
     Range("H3:O3").Select
     Selection.AutoFill Destination:=Range("H3:O" & LastRow)
     Range("I:I,K:K,M:M,O:O").Select
